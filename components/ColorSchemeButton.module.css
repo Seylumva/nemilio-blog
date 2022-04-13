@@ -1,0 +1,19 @@
+.light {
+  color: rgb(245, 245, 63);
+}
+
+.dark {
+  color: rgb(132, 167, 236);
+}
+
+.button {
+  background: none;
+  border: none;
+  aspect-ratio: 1 / 1;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 1.6rem;
+  cursor: pointer;
+}

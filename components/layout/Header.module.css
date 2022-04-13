@@ -1,0 +1,33 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header-menu {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.button {
+  background: none;
+  border: none;
+  aspect-ratio: 1 / 1;
+
+  display: grid;
+  place-items: center;
+
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: inherit;
+}
+
+.header > a {
+  font-size: 2rem;
+  font-weight: 700;
+}

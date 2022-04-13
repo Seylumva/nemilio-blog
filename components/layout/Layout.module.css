@@ -1,0 +1,27 @@
+.container {
+  max-width: 1200px;
+  width: 90%;
+  margin: 0 auto;
+  flex: 1;
+}
+
+.light {
+  color: rgb(18, 18, 18);
+  background: whitesmoke;
+}
+
+.dark {
+  background: #222;
+  color: #fff;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+
+  min-height: 100vh;
+
+  transition: all 350ms ease;
+}

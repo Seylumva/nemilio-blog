@@ -1,0 +1,18 @@
+.post {
+  font-size: 1.2rem;
+}
+
+.image {
+  position: relative;
+  height: 500px;
+}
+
+.post-image {
+  height: 250px;
+  position: relative;
+}
+
+.post-text {
+  max-width: 960px;
+  margin: 0 auto;
+}
