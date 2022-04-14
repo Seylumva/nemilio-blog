@@ -3,16 +3,11 @@ import { FaCog } from "react-icons/fa";
 import ColorSchemeButton from "../ColorSchemeButton";
 import styles from "./Header.module.css";
 
-type Props = {
-  darkMode: boolean;
-  toggleDarkMode: () => void;
-};
-
-export default function Header({ darkMode, toggleDarkMode }: Props) {
+export default function Header({ darkMode, toggleDarkMode }: any) {
   return (
     <header className={styles.header}>
       <Link href="/">
-        <a>nemil.io</a>
+        <a className={styles.title}>nemil.io</a>
       </Link>
       <aside className={styles["header-menu"]}>
         <ColorSchemeButton

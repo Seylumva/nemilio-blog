@@ -1,8 +1,8 @@
 .post-list {
+  padding: 0;
+  margin: 0;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  /* This is better for small screens, once min() is better supported */
-  /* grid-template-columns: repeat(auto-fill, minmax(min(200px, 100%), 1fr)); */
   gap: 2rem;
 }
 
@@ -13,6 +13,7 @@
 
 .post-image {
   height: 150px;
+  position: relative;
 }
 
 .post-image img {
@@ -42,10 +43,12 @@
 
 .info p {
   margin: 0;
-  color: #d5d5d5;
 }
 
 .info span {
   font-size: 0.9rem;
-  color: #939393;
+}
+
+.post {
+  color: inherit;
 }

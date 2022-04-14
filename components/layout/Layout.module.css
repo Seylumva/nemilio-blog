@@ -6,12 +6,19 @@
 }
 
 .light {
+  color: rgb(41, 41, 41);
+  background: #fff;
+}
+
+.light > * {
   color: rgb(18, 18, 18);
-  background: whitesmoke;
 }
 
 .dark {
-  background: #222;
+  background: #101111;
+}
+
+.dark > * {
   color: #fff;
 }
 
