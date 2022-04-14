@@ -14,9 +14,9 @@ export default function Header({ darkMode, toggleDarkMode }: any) {
           darkMode={darkMode}
           toggleDarkMode={toggleDarkMode}
         />
-        <button className={styles.button}>
+        {/* <button className={styles.button}>
           <FaCog />
-        </button>
+        </button> */}
       </aside>
     </header>
   );

@@ -9,6 +9,9 @@ type Props = {
 export default function ColorSchemeButton({ darkMode, toggleDarkMode }: Props) {
   return (
     <button
+      aria-label={`${
+        darkMode ? "Switch to light mode" : "Switch to dark mode"
+      }`}
       onClick={toggleDarkMode}
       className={`${styles.button}  ${darkMode ? styles.dark : styles.light}`}
     >
