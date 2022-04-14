@@ -2,7 +2,6 @@ import { PortableText } from "@portabletext/react";
 import { formatDistanceToNowStrict } from "date-fns";
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
 import PostList from "../../components/PostList";
 import Sanity, { urlFor } from "../../sanityClient";
 import styles from "./Post.module.css";
@@ -13,6 +12,18 @@ const portableTextComponents = {
       <div className={styles["post-image"]}>
         <Image src={urlFor(value).url()} layout="fill" objectFit="cover" />
       </div>
+    ),
+  },
+  marks: {
+    link: ({ value, text }: any) => (
+      <a
+        href={value.href}
+        target="_blank"
+        rel="noopener noreferrer"
+        className={styles["post-link"]}
+      >
+        {text}
+      </a>
     ),
   },
 };

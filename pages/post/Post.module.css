@@ -13,6 +13,17 @@
   margin-block: 2rem;
 }
 
+.post-link {
+  opacity: 0.8;
+  transition: ease 250ms;
+  border-bottom: 2px solid transparent;
+}
+
+.post-link:hover {
+  opacity: 1;
+  border-bottom: 2px solid currentColor;
+}
+
 .post-text {
   max-width: 700px;
   margin: 1.5rem auto;

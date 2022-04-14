@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLocalStorage } from "../../hooks/useLocalStorage";
 import styles from "./Layout.module.css";
 import Footer from "./Footer";
 import Header from "./Header";
@@ -10,13 +11,13 @@ interface Props {
 export default function Layout({ children }: Props) {
   const [darkMode, setDarkMode] = useState(true);
 
-  const toggleDarkMode = () => {
+  function toggleDarkMode() {
     setDarkMode(!darkMode);
-  };
+  }
 
   return (
     <div className={`${styles.page} ${darkMode ? styles.dark : styles.light}`}>
-      <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      <Header darkMode={Boolean(darkMode)} toggleDarkMode={toggleDarkMode} />
       <main className={styles.container}>{children}</main>
       <Footer />
     </div>
