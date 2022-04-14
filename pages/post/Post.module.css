@@ -3,12 +3,47 @@
   height: 500px;
 }
 
+.post-title {
+  font-size: 2.5rem;
+}
+
 .post-image {
   height: 250px;
   position: relative;
+  margin-block: 2rem;
 }
 
 .post-text {
   max-width: 700px;
-  margin: 0 auto;
+  margin: 1.5rem auto;
+  line-height: 1.5;
+  font-size: 18px;
+}
+
+.main {
+  margin-bottom: 5rem;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.info img {
+  border-radius: 50%;
+}
+
+.info .author {
+  display: flex;
+  flex-direction: column;
+}
+
+.info .author p {
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.info .author span {
+  font-size: 1rem;
 }

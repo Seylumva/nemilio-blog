@@ -11,7 +11,7 @@ const portableTextComponents = {
   types: {
     image: ({ value }: any) => (
       <div className={styles["post-image"]}>
-        <Image src={urlFor(value).url()} layout="fill" objectFit="contain" />
+        <Image src={urlFor(value).url()} layout="fill" objectFit="cover" />
       </div>
     ),
   },
@@ -22,20 +22,44 @@ export default function Post({ post, otherPostsByAuthor }: any) {
     <>
       <Head>
         <title>{post.title}</title>
+        <meta
+          name="description"
+          content={`Read ${post.title} and more developer blog posts at blog.nemil.io`}
+        />
       </Head>
       <div className={styles.main}>
         <div className={styles.image}>
           <Image
-            src={post.mainImage.asset.url}
+            src={urlFor(post.mainImage).url()}
+            alt=""
             layout="fill"
             objectFit="cover"
             priority
           />
         </div>
-        <div className={styles["post-text"]}>
-          <h2>{post.title}</h2>
+        <section className={styles["post-text"]}>
+          <header>
+            <div className={styles.info}>
+              <Image
+                src={urlFor(post.author.image).url()}
+                width={50}
+                height={50}
+                priority
+              />
+              <div className={styles.author}>
+                <p>{post.author.name}</p>
+                <span>
+                  Posted{" "}
+                  {formatDistanceToNowStrict(new Date(post.publishedAt), {
+                    addSuffix: true,
+                  })}
+                </span>
+              </div>
+            </div>
+            <h1 className={styles["post-title"]}>{post.title}</h1>
+          </header>
           <PortableText value={post.body} components={portableTextComponents} />
-        </div>
+        </section>
       </div>
       <aside>
         <h2>More by this author</h2>

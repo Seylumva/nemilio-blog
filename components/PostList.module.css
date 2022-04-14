@@ -10,6 +10,7 @@
 .post {
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .post-image {
@@ -23,10 +24,10 @@
 }
 
 .info {
-  margin-top: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-top: auto;
 }
 
 .info img {
@@ -51,4 +52,8 @@
 
 .post {
   color: inherit;
+}
+
+.section {
+  margin-block: 3rem;
 }
