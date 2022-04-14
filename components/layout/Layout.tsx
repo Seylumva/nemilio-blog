@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { useLocalStorage } from "../../hooks/useLocalStorage";
 import styles from "./Layout.module.css";
 import Footer from "./Footer";
 import Header from "./Header";
