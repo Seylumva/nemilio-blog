@@ -1,12 +1,5 @@
-.light {
-  color: rgb(245, 245, 63);
-}
-
-.dark {
-  color: rgb(132, 167, 236);
-}
-
 .button {
+  color: inherit;
   background: none;
   border: none;
   aspect-ratio: 1 / 1;

@@ -12,7 +12,7 @@ export default function ColorSchemeButton({ darkMode, toggleDarkMode }: Props) {
       onClick={toggleDarkMode}
       className={`${styles.button}  ${darkMode ? styles.dark : styles.light}`}
     >
-      {darkMode ? <FaMoon /> : <FaSun />}
+      {darkMode ? <FaSun /> : <FaMoon />}
     </button>
   );
 }

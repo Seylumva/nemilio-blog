@@ -15,7 +15,7 @@ export default function PostList({ posts }: any) {
                 src={urlFor(post.mainImage).url()}
                 alt=""
                 layout="fill"
-                objectFit="contain"
+                objectFit="cover"
               />
             </div>
             <h3>{post.title}</h3>
